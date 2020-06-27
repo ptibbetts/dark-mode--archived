@@ -62,7 +62,7 @@ export default ({ pageContext, data }) => {
     if (category === 'tweet') {
         cols = 2;
     }
-    const gridClasses = `grid md:grid-cols-2 lg:grid-cols-${cols} gap-4`;
+    const gridClasses = `grid grid-cols-1 sm:grid-cols-${cols-1} md:grid-cols-${cols} gap-4`;
 
     return (
         <Layout>
@@ -81,9 +81,9 @@ export default ({ pageContext, data }) => {
                             onFiltersChange={handleFiltersChange}
                         />
                     }
-                    <div className={gridClasses} style={{gridAutoRows: '1fr'}}>
+                    <div className={gridClasses}>
                         {shownItems().map((item, index) => (
-                                <div className="flex" key={index}>
+                                <div className="md:flex" key={index}>
                                     {item.type === 'tweet' &&
                                         <TweetEmbed
                                             id={item.tweetid} 

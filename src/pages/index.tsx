@@ -53,12 +53,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Dark Mode Resources" />
       <Masthead>
-        A collection of Dark Mode&nbsp;
-        <Link to="/articles" className="underline">articles</Link>,&nbsp;
-        <Link to="/tools" className="underline">tools</Link>,&nbsp;
-        <Link to="/examples" className="underline">examples</Link>,&nbsp; 
-        <Link to="/tweets" className="underline">tweets</Link> and even a&nbsp;
-        <Link to="/podcasts" className="underline whitespace-no-wrap">podcast</Link>
+        A collection of Dark Mode <Link to="/articles" className="underline">articles</Link>, <Link to="/tools" className="underline">tools</Link>, <Link to="/examples" className="underline">examples</Link>, <Link to="/tweets" className="underline">tweets</Link> and even a <Link to="/podcasts" className="underline whitespace-no-wrap">podcast</Link>
       </Masthead>
       <div className="p-4">
         <div className="max-w-screen-xl mx-auto">
