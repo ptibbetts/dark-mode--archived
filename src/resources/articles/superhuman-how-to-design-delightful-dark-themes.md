@@ -2,6 +2,7 @@
 title: How to design delightful dark themes
 url: https://blog.superhuman.com/how-to-design-delightful-dark-themes-7b3da644ff1f
 author: Teresa Man
+type: article
 tags:
     - design
 ---
