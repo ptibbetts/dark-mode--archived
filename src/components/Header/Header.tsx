@@ -27,14 +27,18 @@ const links = [
 
 let initialDarkMode = false;
 const enableDarkMode = () => {
-    document.documentElement.classList.add('mode-dark')
+    if (typeof document !== 'undefined') {
+        document.documentElement.classList.add('mode-dark')
+    }
 }
   
 const disableDarkMode = () => {
-    document.documentElement.classList.remove('mode-dark');
+    if (typeof document !== 'undefined') {
+        document.documentElement.classList.remove('mode-dark');
+    }
 }
 
-if (window.matchMedia) {
+if (typeof window !== 'undefined' && window.matchMedia) {
     const prefersDark = '(prefers-color-scheme: dark)';
     if (window.matchMedia(prefersDark).matches) {
         enableDarkMode();

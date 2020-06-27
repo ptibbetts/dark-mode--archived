@@ -54,7 +54,7 @@ export default ({ pageContext, data }) => {
     }
 
     let twitterTheme = 'light';
-    if (document.documentElement.classList.contains('mode-dark')) {
+    if (typeof document !== 'undefined' && document.documentElement.classList.contains('mode-dark')) {
         twitterTheme = 'dark';
     }
 
