@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
     const { frontmatter, html }: { frontmatter: FrontMatter, html: string} = edge.node;
     if (!frontmatter.featured) return;
     featured[frontmatter.type].push(
-      <div className="flex" key={index}>
+      <div className="md:flex" key={index}>
         <Resource
           title={frontmatter.title}
           tags={frontmatter.tags}
@@ -64,25 +64,25 @@ const IndexPage = ({ data }) => {
         <div className="max-w-screen-xl mx-auto">
           <div className="mb-4">
             <h2 className="font-bold mb-4 dark:text-gray-100">Featured Articles</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.article}
             </div>
           </div>
           <div className="mb-4">
             <h2 className="font-bold mb-4 text-gray-800 dark:text-gray-100">Featured Tools</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.tool}
             </div>
           </div>
           <div className="mb-4">
             <h2 className="font-bold mb-4 text-gray-800 dark:text-gray-100">Featured Examples</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.example}
             </div>
           </div>
           <div className="mb-4">
             <h2 className="font-bold mb-4 text-gray-800 dark:text-gray-100">Featured Podcast</h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featured.podcast}
             </div>
           </div>
