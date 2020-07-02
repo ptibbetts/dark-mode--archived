@@ -5,6 +5,8 @@ import addons from '@storybook/addons'
 
 import '../src/components/layout.css';
 
+global.__BASE_PATH__ = '';
+
 // get an instance to the communication channel for the manager and preview
 const channel = addons.getChannel()
 
