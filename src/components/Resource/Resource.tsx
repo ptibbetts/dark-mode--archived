@@ -5,7 +5,7 @@ interface Props {
     title: string,
     url?: string,
     content?: string
-    tags: string[]
+    tags?: string[]
     image?: string
     author?: string
 }
