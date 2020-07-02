@@ -100,6 +100,7 @@ export default ({ pageContext, data }) => {
                                             content={item.content}
                                             author={item.author}
                                             image={item.image}
+                                            padding={item.padding}
                                         />
                                     }
                                 </div>
@@ -128,6 +129,7 @@ export const pageQuery = graphql`
                         tweetid
                         image
                         author
+                        padding
                     }
                 }
             }

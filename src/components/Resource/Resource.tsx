@@ -2,23 +2,27 @@ import React from 'react';
 import Tag from '../Tag';
 
 interface Props {
-    title: string,
+    title?: string,
     url?: string,
     content?: string
     tags: string[]
     image?: string
     author?: string
+    padding?: number
 }
 
 export const Resource = (props: Props) => {
-    const { 
+    const {
         author,
-        content, 
+        content,
         image,
         tags,
-        title, 
-        url, 
+        title,
+        url,
+        padding
     } = props;
+
+    const imagePadding = padding ? 'p-4' : '';
 
     return (
         <div className="max-w-md rounded overflow-hidden shadow bg-gray-100 dark:bg-gray-700">
@@ -26,7 +30,7 @@ export const Resource = (props: Props) => {
                 {image &&
                     <a href={url}>
                         <img
-                            className="w-full"
+                            className={`w-full ${imagePadding}`}
                             src={image} 
                             alt={title}
                         />
