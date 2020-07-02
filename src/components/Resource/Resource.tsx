@@ -21,7 +21,7 @@ export const Resource = (props: Props) => {
     } = props;
 
     return (
-        <div className="max-w-md rounded overflow-hidden shadow bg-gray-100 dark:bg-gray-700">
+        <div className="w-full max-w-md rounded overflow-hidden shadow bg-gray-100 dark:bg-gray-700">
             <div className="flex flex-col h-full">
                 {image &&
                     <a href={url}>
