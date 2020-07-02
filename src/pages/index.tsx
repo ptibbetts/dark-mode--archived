@@ -28,6 +28,7 @@ const IndexPage = ({ data }) => {
     featured?: boolean
     url: string
     image?: string
+    padding?: boolean
     author?: string
     content?: string
   }
@@ -42,9 +43,11 @@ const IndexPage = ({ data }) => {
           tags={frontmatter.tags}
           url={frontmatter.url}
           image={frontmatter.image}
+          padding={frontmatter.padding}
           author={frontmatter.author}
           content={html}
         />
+        {frontmatter.padding}
       </div>
     )
   });
@@ -104,6 +107,7 @@ export const pageQuery = graphql`
                         featured
                         url
                         image
+                        padding
                         author
                     }
                 }
