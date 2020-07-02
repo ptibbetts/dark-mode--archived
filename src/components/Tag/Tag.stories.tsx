@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tag } from './Tag';
+import { action } from '@storybook/addon-actions';
 
 export default {
     component: Tag,
@@ -8,9 +9,9 @@ export default {
 }
 
 export const Default = () => (
-    <Tag name="Design"/>
+    <Tag name="Design" onClick={action('clicked default tag')} />
 );
 
 export const Active = () => (
-    <Tag name="Design" active />
+    <Tag name="Design" active onClick={action('clicked active tag')} />
 )
