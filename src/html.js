@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="bg-gray-200 dark:bg-gray-800">
+      <body {...props.bodyAttributes} className="bg-gray-200 dark:bg-gray-800 overflow-y-scroll">
         {props.preBodyComponents}
         <div
           key={`body`}

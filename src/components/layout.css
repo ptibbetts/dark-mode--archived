@@ -8,8 +8,4 @@ html {
 @tailwind  components;
 /* purgecss end ignore */
 
-body {
-    overflow-y: scroll;
-}
-
 @tailwind  utilities;
